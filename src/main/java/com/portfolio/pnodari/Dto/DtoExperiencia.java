@@ -16,12 +16,35 @@ public class DtoExperiencia {
     @NotBlank
     private String descripcionExp;
     
+    private String fecha_fin;
+    
+    @NotBlank
+    private String fecha_inicio;
+    
     //Constructores
     public DtoExperiencia() { }
 
-    public DtoExperiencia(String nombreExp, String descripcionExp) {
+    public DtoExperiencia(String nombreExp, String descripcionExp, String fecha_fin, String fecha_inicio) {
         this.nombreExp = nombreExp;
         this.descripcionExp = descripcionExp;
+        this.fecha_fin = fecha_fin;
+        this.fecha_inicio = fecha_inicio;
+    }   
+
+    public String getFecha_fin() {
+        return fecha_fin;
+    }
+
+    public void setFecha_fin(String fecha_fin) {
+        this.fecha_fin = fecha_fin;
+    }
+
+    public String getFecha_inicio() {
+        return fecha_inicio;
+    }
+
+    public void setFecha_inicio(String fecha_inicio) {
+        this.fecha_inicio = fecha_inicio;
     }
     
     //Getter y Setter

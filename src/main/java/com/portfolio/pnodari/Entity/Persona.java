@@ -33,7 +33,7 @@ public class Persona {
     private String descripcion;
     
     //Cargaremos la img por url
-    @Size(min = 1, max = 255, message = "No cumple con la longitud")
+    
     private String img;
 
     //Constructores

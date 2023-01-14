@@ -55,6 +55,7 @@ public class ProyectoController {
         
         Proyecto proyecto= new Proyecto(dtoProyecto.getNombreP(), 
                                         dtoProyecto.getDescripcionP(), 
+                                        dtoProyecto.getFecha_realizacion(),
                                         dtoProyecto.getImg());
         
         impProyectoService.save(proyecto);

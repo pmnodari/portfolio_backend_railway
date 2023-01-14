@@ -53,7 +53,9 @@ public class ExperienciaController {
         
         //Pasan las dos validaciones        
         Experiencia experiencia=new Experiencia(dtoExpe.getNombreExp(), 
-                                          dtoExpe.getDescripcionExp());
+                                                dtoExpe.getDescripcionExp(),
+                                                dtoExpe.getFecha_fin(),
+                                                dtoExpe.getFecha_inicio());
         
         //Guardamos objeto
         iExperienciaService.save(experiencia);
@@ -99,6 +101,8 @@ public class ExperienciaController {
         
         experiencia.setNombreExp(dtoExpe.getNombreExp());
         experiencia.setDescripcionExp(dtoExpe.getDescripcionExp());
+        experiencia.setFecha_fin(dtoExpe.getFecha_fin());
+        experiencia.setFecha_inicio(dtoExpe.getFecha_inicio());
     
         iExperienciaService.save(experiencia);
         

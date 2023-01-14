@@ -55,7 +55,9 @@ public class EducacionController {
         
         //Pasan las validaciones
         Educacion educacion=new Educacion(dtoEdu.getNombreEdu(), 
-                dtoEdu.getDescripcionEdu());
+                                          dtoEdu.getDescripcionEdu(),
+                                          dtoEdu.getFecha_inicio(),
+                                          dtoEdu.getFecha_fin());
         
         impEducacionService.save(educacion);
         
@@ -104,6 +106,8 @@ public class EducacionController {
         //Seteo los cambios del registro
         educacion.setNombreEdu(dtoEdu.getNombreEdu());
         educacion.setDescripcionEdu(dtoEdu.getDescripcionEdu());
+        educacion.setFecha_fin(dtoEdu.getFecha_fin());
+        educacion.setFecha_inicio(dtoEdu.getFecha_inicio());
         
         //Guardo los cambios
         impEducacionService.save(educacion);
